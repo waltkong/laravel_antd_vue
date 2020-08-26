@@ -19,16 +19,18 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::group([
+Route::group(['namespace' => 'Api'], function ($router) {
 
-    'prefix' => 'auth'
+    Route::post('auth/login', 'System\AuthController@login');
+    Route::post('auth/logout', 'System\AuthController@logout');
+    Route::post('auth/refresh', 'System\AuthController@refresh');
+    Route::post('auth/me', 'System\AuthController@me');
 
-], function ($router) {
+    Route::post('menu/login', 'System\AuthController@login');
+    Route::post('auth/logout', 'System\AuthController@logout');
+    Route::post('auth/refresh', 'System\AuthController@refresh');
+    Route::post('auth/me', 'System\AuthController@me');
 
-    Route::post('login', 'AuthController@login');
-    Route::post('logout', 'AuthController@logout');
-    Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
 
 });
 

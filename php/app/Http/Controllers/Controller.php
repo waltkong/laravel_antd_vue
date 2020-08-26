@@ -10,4 +10,17 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+
+    protected $logic;
+
+    protected $validator;
+
+    protected $input;
+
+    public function __construct()
+    {
+        $this->input = request()->input();
+    }
+
 }

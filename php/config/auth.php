@@ -73,7 +73,7 @@ return [
 
         'system_user' => [
             'driver' => 'eloquent',
-            'model' => App\Model\System\SystemUser::class,
+            'model' => App\Model\System\SystemUserModel::class,
         ],
 
     ],

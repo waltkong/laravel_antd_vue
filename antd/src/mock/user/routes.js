@@ -19,7 +19,11 @@ Mock.mock(`${process.env.VUE_APP_API_BASE_URL}/routes`, 'get', () => {
         name: '验权表单',
         icon: 'file-excel',
         authority: 'form'
-      }
+      },
+      {
+        router: 'system',
+        children: ['systemUserIndex', 'systemUserCreate']
+      },
     ]
   }]
   return result

@@ -5,12 +5,12 @@ import {parseRoutes} from '@/utils/routerUtil'
 const routesConfig = [
   'login',
   'root',
-  'dashboard',
-  'workplace',
-  'analysis',
-  'article',
-  'systemUserIndex',
-  'systemUserCreate',
+  // 'dashboard',
+  // 'workplace',
+  // 'analysis',
+  // 'article',
+  // 'systemUserIndex',
+  // 'systemUserCreate',
   {
     router: 'exp404',
     path: '*',

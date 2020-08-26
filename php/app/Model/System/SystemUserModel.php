@@ -4,9 +4,22 @@ namespace App\Model\System;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class SystemUser extends Authenticatable implements JWTSubject
+class SystemUserModel extends Authenticatable implements JWTSubject
 {
+
+    use SoftDeletes;
+
+    protected $datas = ['deleted_at'];
+
+    public $table = 'system_user';  //管理员表
+
+    protected $primaryKey = 'id';
+
+    public $timestamps = true;
+
+
     use Notifiable;
 
     /**

@@ -149,24 +149,29 @@ const routerMap = {
     name: '颜色复选框',
     component: () => import('@/pages/components/Palette')
   },
-  systemUserIndex: {                                                        
+  system: {
+    name: '系统管理',
+    icon: 'form',
+    component: view.page
+  },
+  systemUserIndex: {                                                       
     name: '用户管理',                                            
     component: () => import('@/pages/system/user/Index'),  
     icon: 'permission',                        
     invisible: false,                         
     authority: {                               
-      permission: 'form',                
-      role: 'admin'                   
+      permission: '',                
+      role: ''                   
     }                              
   },
-  systemUserCreate: {                                                        
+  systemUserCreate: {                                                   
     name: '用户新增',                                            
     component: () => import('@/pages/system/user/Create'),  
     icon: 'permission',                        
     invisible: false,                         
     authority: {                               
-      permission: 'form',                
-      role: 'admin'                   
+      permission: '',                
+      role: ''                   
     }                              
   },
 }

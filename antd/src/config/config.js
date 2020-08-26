@@ -9,5 +9,6 @@ module.exports = {
   animate: {
     name: 'roll',
     direction: 'default'
-  }
+  },
+  base_url: 'http://local.laraAntD.com'
 }
